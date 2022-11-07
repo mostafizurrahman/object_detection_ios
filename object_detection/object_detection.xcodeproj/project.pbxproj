@@ -16,6 +16,9 @@
 		C43BAB17291467E100D5EC89 /* object_detectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BAB16291467E100D5EC89 /* object_detectionTests.swift */; };
 		C43BAB21291467E100D5EC89 /* object_detectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BAB20291467E100D5EC89 /* object_detectionUITests.swift */; };
 		C43BAB23291467E100D5EC89 /* object_detectionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BAB22291467E100D5EC89 /* object_detectionUITestsLaunchTests.swift */; };
+		C43BAB3029146F2200D5EC89 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BAB2F29146F2200D5EC89 /* CameraHandler.swift */; };
+		C45CE7E729198DCE006BACDB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CE7E629198DCE006BACDB /* Utils.swift */; };
+		C45CE7E929198DF3006BACDB /* yolov5s.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = C45CE7E829198DF2006BACDB /* yolov5s.mlmodelc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		C43BAB1C291467E100D5EC89 /* object_detectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = object_detectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43BAB20291467E100D5EC89 /* object_detectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = object_detectionUITests.swift; sourceTree = "<group>"; };
 		C43BAB22291467E100D5EC89 /* object_detectionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = object_detectionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C43BAB2F29146F2200D5EC89 /* CameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
+		C45CE7E629198DCE006BACDB /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C45CE7E829198DF2006BACDB /* yolov5s.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = yolov5s.mlmodelc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 		C43BAAFE291467E000D5EC89 /* object_detection */ = {
 			isa = PBXGroup;
 			children = (
+				C45CE7E829198DF2006BACDB /* yolov5s.mlmodelc */,
+				C45CE7E629198DCE006BACDB /* Utils.swift */,
 				C43BAAFF291467E000D5EC89 /* AppDelegate.swift */,
 				C43BAB01291467E000D5EC89 /* SceneDelegate.swift */,
 				C43BAB03291467E000D5EC89 /* ViewController.swift */,
@@ -106,6 +114,7 @@
 				C43BAB08291467E100D5EC89 /* Assets.xcassets */,
 				C43BAB0A291467E100D5EC89 /* LaunchScreen.storyboard */,
 				C43BAB0D291467E100D5EC89 /* Info.plist */,
+				C43BAB2F29146F2200D5EC89 /* CameraHandler.swift */,
 			);
 			path = object_detection;
 			sourceTree = "<group>";
@@ -231,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45CE7E929198DF3006BACDB /* yolov5s.mlmodelc in Resources */,
 				C43BAB0C291467E100D5EC89 /* LaunchScreen.storyboard in Resources */,
 				C43BAB09291467E100D5EC89 /* Assets.xcassets in Resources */,
 				C43BAB07291467E000D5EC89 /* Main.storyboard in Resources */,
@@ -258,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45CE7E729198DCE006BACDB /* Utils.swift in Sources */,
 				C43BAB04291467E000D5EC89 /* ViewController.swift in Sources */,
+				C43BAB3029146F2200D5EC89 /* CameraHandler.swift in Sources */,
 				C43BAB00291467E000D5EC89 /* AppDelegate.swift in Sources */,
 				C43BAB02291467E000D5EC89 /* SceneDelegate.swift in Sources */,
 			);
@@ -437,14 +449,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YA3WGW79TA;
+				DEVELOPMENT_TEAM = 4XPYVR2AGK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = object_detection/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Objector;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,14 +479,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YA3WGW79TA;
+				DEVELOPMENT_TEAM = 4XPYVR2AGK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = object_detection/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Objector;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
